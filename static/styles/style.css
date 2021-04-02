@@ -36,7 +36,9 @@ body {
   width: fit-content;
   max-width: 80%;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
+  text-align: left;
+  display: inline-block;
 }
 .container .new-post form {
   width: 50%;
@@ -53,6 +55,7 @@ body {
   padding: 1rem;
   font-size: 1rem;
   border-radius: 10px;
+  background-color: #e9eaec;
 }
 .container .new-post form textarea {
   height: 10rem;

@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+app.use(express.static(path.join(__dirname, 'static')));
 app.use('/static', express.static(path.join(__dirname, "./static")));
 app.use('/api', routes);
 

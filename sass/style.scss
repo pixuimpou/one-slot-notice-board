@@ -43,7 +43,9 @@ body {
             width: fit-content;
             max-width: 80%;
             line-height: 1.6;
-            margin-bottom: $margin-titles;
+            margin-bottom: $margin-titles * 3;
+            text-align: left;
+            display: inline-block;
         }
 
 
@@ -65,6 +67,7 @@ body {
                     padding: 1rem;
                     font-size: 1rem;
                     border-radius: 10px;
+                    background-color: $content-bg-color
                 }
 
                 input {
