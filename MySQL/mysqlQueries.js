@@ -9,7 +9,7 @@ module.exports = {
                 if (err) throw err;
                 console.log("Connected!");
             });
-            con.query("SELECT content FROM post;",
+            con.query("SELECT title, content FROM post;",
             (err, rows) => {
                 if (rows === undefined){
                     reject(new Error("Error rows is undefined"));
@@ -20,9 +20,9 @@ module.exports = {
         })
     },
 
-    overridePost: (content) => {
+    overridePost: (title, content) => {
         const sqlDelete = "DELETE FROM post;"
-        const sqlInsert = `INSERT INTO post VALUES(null, ${JSON.stringify(content)});`
+        const sqlInsert = `INSERT INTO post VALUES(null, ${JSON.stringify(content)}, ${JSON.stringify(title)});`
         const con = config.connection();
         con.connect(err => {
             if (err) throw err;

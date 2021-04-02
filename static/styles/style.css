@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #90adc6;
+}
+
+.container {
+  margin: 5rem auto 0;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+}
+.container header h1 {
+  color: #fad02c;
+  margin-bottom: 2rem;
+}
+.container main {
+  width: 100%;
+}
+.container main h2 {
+  color: #333652;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.container main .content {
+  margin: auto;
+  padding: 2rem;
+  background-color: #e9eaec;
+  border-radius: 20px;
+  width: fit-content;
+  max-width: 80%;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.container .new-post form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.container .new-post form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.container .new-post form textarea, .container .new-post form input {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+.container .new-post form textarea {
+  height: 10rem;
+  resize: none;
+  margin-bottom: 2rem;
+}
+.container .new-post form .btn {
+  width: 100%;
+  background-color: #fad02c;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.container .new-post h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

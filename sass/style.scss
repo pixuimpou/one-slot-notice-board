@@ -1,0 +1,95 @@
+$bg-color: #90adc6;
+$content-bg-color: #e9eaec;
+$main-color: #fad02c;
+$sec-color: #333652;
+$margin-titles: 2rem;
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-color;
+}
+
+.container {
+    margin: 5rem auto 0;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    header {
+        h1 {
+            color: $main-color;
+            margin-bottom: $margin-titles;
+        }
+    }
+    main {
+        width: 100%;
+        h2 {
+            color: $sec-color;
+            font-size: 3rem;
+            margin-bottom: $margin-titles;
+        }
+
+        .content {
+            margin: auto;
+            padding: 2rem;
+            background-color: $content-bg-color;
+            border-radius: 20px;
+            width: fit-content;
+            max-width: 80%;
+            line-height: 1.6;
+            margin-bottom: $margin-titles;
+        }
+
+
+        }
+        .new-post {
+            form {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+
+                label {
+                    margin-bottom: .5rem;
+                    font-weight: bold;
+                }
+
+                %input {
+                    margin-bottom: 1.5rem;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                }
+
+                input {
+                    @extend %input;
+                }
+                textarea {
+                    @extend %input;
+                    height: 10rem;
+                    resize: none;
+                    margin-bottom: $margin-titles;
+                }
+                .btn {
+                    width: 100%;
+                    background-color: $main-color;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    margin: auto;
+                    margin-bottom: $margin-titles;
+                }
+            }
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: $margin-titles;
+            }
+
+    }
+}

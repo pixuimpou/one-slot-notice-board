@@ -7,14 +7,14 @@ router.use(bodyParser());
 
 router.get('/', (req, res) => {
     sql.getPost().then(result => {
-        res.send(result[0].content);
+        res.send(result[0]);
     }).catch(err =>{
         res.send("sem post");
     });
 });
 
 router.post('/', (req, res) => {
-    if(sql.overridePost(req.body.content) !== 0) {
+    if(sql.overridePost(req.body.title ,req.body.content) !== 0) {
         res.status(201).send();
     } else {
         res.status(500).send();
