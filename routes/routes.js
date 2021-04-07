@@ -6,19 +6,19 @@ const bodyParser = require('body-parser');
 router.use(bodyParser());
 
 router.get('/', (req, res) => {
-    sql.getPost().then(result => {
-        res.send(result[0]);
-    }).catch(err =>{
-        res.send("sem post");
+    sql.getPost((data) => {
+        res.send(data[0]);
     });
 });
 
 router.post('/', (req, res) => {
-    if(sql.overridePost(req.body.title ,req.body.content) !== 0) {
-        res.status(201).send();
-    } else {
-        res.status(500).send();
-    }
+    sql.overridePost(req.body.title, req.body.content, (rows) => {
+        if (rows !== 0) {
+            res.status(201).send();
+        } else {
+            res.status(500).send();
+        }
+    });
 });
 
 module.exports = router;
